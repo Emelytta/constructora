@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construcciones Blocka</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="#inicio"><img src="img/iso-blocka.png" alt="logo-inicio" width="50px"></a></div>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="#contacto"><button class="presupuesto">Solicitar Presupuesto</button></a>
+  </header>
+    <main>
+        <div  id="inicio" class="pasador-imagenes">
+            <div class="pasador">
+              <img src="img/cabecera-pagina1.png" alt="Imagen 1">
+              <img src="img/cabecera-pagina.png" alt="Imagen 2">
+              <img src="img/cabecera-pagina3.png" alt="Imagen 3">
+            </div>
+          </div>
+        <section class="logotipo">
+            <div><img src="img/logo-constructora.png" alt="logotipo"></div>
+        </section>
+        
+        <section >
+            
+            <div class="contenedor-eslogan">
+            <h1>Tu aliado en proyectos de construcción</h1>
+            <p>Expertos en crear espacios de calidad</p>
+            <a class="link-proyectos" href="#proyectos" class="presupuesto">Ver nuestros proyectos</a>
+            </div>
+
+            <div class="contenedor-iconos">
+              <figure><img class="icono" src="img/sostenibilidad.png" alt="icono-sosteniblilidad"><figcaption>SOSTENIBILIDAD</figcaption></figure>
+              <figure><img class="icono" src="img/seguridad.png" alt="icono-sosteniblilidad"><figcaption>SEGURIDAD</figcaption></figure>
+              <figure><img class="icono" src="img/certificado.png" alt="icono-sosteniblilidad"><figcaption>CERTIFICACIÓN</figcaption></figure>
+          </div>
+        </section>
+
+        
+        <section id="servicios" class="servicios">
+            <h2>Servicios</h2>
+            <div class="servicio">
+            <h3>Construcción Residencial</h3>
+            <p>Proyectos de viviendas de alta calidad.</p>
+            </div>
+            <div class="servicio">
+            <h3>Construcción Comercial</h3>
+            <p>Construcción de espacios comerciales adaptados a tus necesidades.</p>
+            </div>
+            <div class="servicio">
+            <h3>Proyectos Personalizados</h3>
+            <p>Creación de espacios únicos para cada cliente.</p>
+            </div>
+        </section>
+
+        
+        <section id="proyectos" class="proyectos">
+          <h2 style="text-align:center">Proyectos</h2>
+
+          <div class="row">
+            <div class="column">
+              <figure><img src="img/proyecto-comercial1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+              <figcaption>Proyecto Comercial</figcaption></figure>
+              
+            </div>
+            <div class="column">
+              <figure><img src="img/personalizada-construccion-arquitectura.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+              <figcaption>Proyecto Personalizado</figcaption></figure>
+            </div>
+            <div class="column">
+              <figure><img src="img/residencial-casitas-2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+              <figcaption>Proyecto Residencial</figcaption></figure>
+            </div>
+          </div>
+          
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+          
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="img/proyecto-comercial1_dentro.png" style="width:70%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="img/personalizada_dentro.png" style="width:70%">
+              </div>
+              
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="img/residencial-casitas2_dentro.png" style="width:70%">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <div class="column">
+                <img class="demo cursor" src="img/proyecto-comercial1_dentro.png" style="width:80%" onclick="currentSlide(1)" alt="Proyecto Comercial">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img/personalizada_dentro.png" style="width:80%" onclick="currentSlide(2)" alt="Proyecto Personalizado">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img/residencial-casitas2_dentro.png" style="width:80%" onclick="currentSlide(3)" alt="Proyecto Residencial">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nuestro equipo-->
+
+        <section id="equipo" class="equipo">
+          <h2>Nuestro equipo</h2>
+          <div class="nuestro-equipo">
+          <div class="empleado">
+              <img src="img/arquitectos.png" alt="Proyecto 1">
+              <h4>María González  / José Fernandez</h4>
+              <p>Arquitectos</p>
+          </div>
+          <div class="empleado">
+              <img src="img/jefa-proyectos.png" alt="Proyecto 2">
+              <h4>Ana Sanchez</h4>
+              <p>Jefa de Producción</p>
+          </div>
+          <div class="empleado" >
+              <img src="img/jefa-gestion.png" alt="Proyecto 3">
+              <h4>Marissa Reuman</h4>
+              <p>Jefe de Vigilancia ambiental</p>
+          </div>
+          <div class="empleado">
+            <img src="img/electricista.jpg" alt="Proyecto 1">
+            <h4>Miguel Rodríguez</h4>
+            <p>Electricista Encargado</p>
+        </div>
+        <div class="empleado">
+            <img src="img/ingeniera.png" alt="Proyecto 2">
+            <h4>Carmen López</h4>
+            <p>Ingeniera</p>
+        </div>
+        <div class="empleado" >
+            <img src="img/empleado-3.png" alt="Proyecto 3">
+            <h4>Pedro Garcón</h4>
+            <p>Jefe de Obras</p>
+        </div>
+          </div>
+      </section>
+
+
+
+        <!-- Contacto -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="presupuesto">Enviar Mensaje</button>
+            </form>
+        </section>
+        </main>
+        <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Construcciones Blocka. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#"> <img src="img/Facebook.png" alt="facebook"> </a>
+        <a href="#"><img src="img/Instagram.png" alt=""></a>
+        <a href="#"><img src="img/X.png" alt="x"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+const images = document.querySelectorAll(".pasador img");
+const totalImages = images.length;
+
+// Función para mover el slider a la siguiente imagen
+function nextImage() {
+  currentIndex = (currentIndex + 1) % totalImages;
+  updateSlider();
+}
+
+// Función para actualizar el slider
+function updateSlider() {
+  const newTransformValue = -currentIndex * 100;
+  document.querySelector(".pasador").style.transform = `translateX(${newTransformValue}%)`;
+}
+
+// Cambiar la imagen cada 3 segundos
+setInterval(nextImage, 3000); // Cambiar imagen cada 3 segundos
+
+// Función para alternar la visibilidad del menú hamburguesa
+function toggleMenu() {
+  const menu = document.querySelector('header nav ul');
+  menu.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar/ocultar el menú
+}
+
+//Lightbox//
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "flex";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+  </script>
+
+</body>
+</html>
